@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: add fresh Google Search Console verification code for civilsahayak.github.io -->
+    <!-- <meta name="google-site-verification" content="PASTE_NEW_VERIFICATION_CODE_HERE" /> -->
+    <title>Metal Weight Calculator — Free Windows App</title>
+    <meta name="description" content="Part of the Civil Sahayak Tool family — calculate any Metal Weight by simply entering dimensions. Free Windows app.">
+    <meta name="keywords"
+        content="Metal Weight Calculator, steel weight calculator, metal weight app, calculate metal weight, weight calculator windows, mrgargsir, tools by mrgargsir, metal weight estimator, construction calculator, engineering calculator" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://civilsahayak.github.io/civilsahayak/tool/metalweightcal.html" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#0f1720">
+    <meta name="msapplication-TileImage" content="images/mstile-144x144.png">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#06b6d4">
+    <meta name="theme-color" content="#0f1720">
+    <meta name="msapplication-navbutton-color" content="#0f1720">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <canvas id="threejs-canvas"></canvas>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <div id="scroll-progress"></div>
+
+    <div class="floating-social">
+        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer" class="floating-social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+        
+        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank" rel="noopener noreferrer" class="floating-social-btn whatsapp-group" title="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://whatsapp.com/channel/0029VbBYrvx47XeIXLM2PU3u" target="_blank" rel="noopener noreferrer" class="floating-social-btn whatsapp-channel" title="WhatsApp Channel"><i class="fas fa-bullhorn"></i></a>
+    </div>
+
+    <div class="wrap">
+        <header>
+            <a href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;">
+                <div class="brand">
+                    <div class="logo pulse">
+                        <img src="images/logo.png" alt="MRGARGSIR Tools" style="width:100%;height:100%;object-fit:contain;padding:0px;">
+                    </div>
+                    <div>
+                        <h1>Civil Sahayak Tool</h1>
+                        <p>(Your Civil Engineering Sahayak — Help At Every Step)</p>
+                        <p>By MRGARGSIR</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <a class="nav-btn" href="../index.html">Home</a>
+                <a class="nav-btn" href="../index.html#features">Features</a>
+                <div class="nav-dropdown">
+                    <button class="nav-btn nav-dropdown-trigger"><i class="fas fa-puzzle-piece"></i> Extensions <i class="fas fa-chevron-down" style="font-size:10px"></i></button>
+                    <div class="nav-dropdown-menu">
+                    <a href="extension-chrome.html"><i class="fab fa-chrome"></i> Chrome/Edge Utility</a>
+                    <a href="extension-whatsapp.html"><i class="fab fa-whatsapp"></i> WhatsApp Sender</a>
+                    <a href="extension-macro.html"><i class="fas fa-robot"></i> Web Automation Macro</a>
+                    <a href="metalweightcal.html"><i class="fas fa-weight-scale"></i> Metal Weight Calculator</a>
+                    </div>
+                </div>
+                <a class="nav-btn" href="tutorials.html">Tutorials</a>
+                <a class="nav-btn" href="download.html">Download</a>
+                <a class="nav-btn" href="purchase.html">Purchase</a>
+                <button class="nav-btn" id="contactBtn"><i class="fas fa-envelope"></i> Contact</button>
+                <button class="theme-toggle" id="themeToggleBtn" title="Toggle light / dark theme" aria-pressed="false">
+                    <span class="knob"><i class="fas fa-moon"></i></span>
+                </button>
+            </nav>
+
+            <div class="contact-modal" id="contactModal">
+                <h3><i class="fas fa-headset"></i> Contact Support</h3>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="label">Email</div>
+                        <div class="value">civilSahayak@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="label">WhatsApp</div>
+                        <div class="value">+91 9728532828</div>
+                    </div>
+                </div>
+
+                <div class="contact-actions">
+                    <button class="contact-btn email" id="emailBtn">
+                        <i class="fas fa-paper-plane"></i> Send Email
+                    </button>
+                    <button class="contact-btn whatsapp" id="whatsappBtn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </button>
+                    <button class="contact-btn whatsapp" id="whatsappgroupBtn">
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer"  title="WhatsApp Group">
+                            <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+                        </a>
+                    </button>
+                </div>
+
+                <!-- 👉 Social Media Links -->
+                <div class="social-divider">
+                    <h4><i class="fas fa-share-nodes"></i> Follow Us</h4>
+                    <div class="social-links-modal">
+                        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer"
+                            class="social-btn facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer" class="social-btn whatsapp-group" title="WhatsApp Group">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbBYrvx47XeIXLM2PU3u" target="_blank"
+                            rel="noopener noreferrer" class="social-btn whatsapp-channel" title="WhatsApp Channel">
+                            <i class="fas fa-bullhorn"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        </header>
+
+
+        <main>
+            <div class="crumb-bar"><a href="../index.html">Home</a> <span>/</span> <span>Extensions</span> <span>/</span> <span>Metal Weight Calculator</span></div>
+            <div class="page-hero fadeInUp">
+                <h2><i class="fas fa-weight-scale"></i> Metal Weight Calculator</h2>
+                <p>A fast and simple Windows app to calculate the weight of any metal by simply entering dimensions. Free and works offline.</p>
+            </div>
+
+            <section id="extension-details" style="margin-top:20px">
+                <h3>🔧 App Features</h3>
+                <div class="panel fadeInUp">
+                    <p class="small"><strong>Important Note:</strong> The Metal Weight Calculator is a standalone Windows app — it works independently of the HEWP Excel Tool and does not require Excel or any browser extension.</p>
+
+                <div class="grid" style="margin-top:20px">
+                    <div class="feature fadeInUp">
+                        <i class="fas fa-cubes" style="color:#f59e0b"></i>
+                        <h4>Multiple Shapes</h4>
+                        <p>Calculate weight for round, sheet, tube, rectangle, and many other metal shapes.</p>
+                    </div>
+                    <div class="feature fadeInUp">
+                        <i class="fas fa-ruler-combined" style="color:var(--accent2)"></i>
+                        <h4>Flexible Units</h4>
+                        <p>Use any combination of metric (mm/cm/m/kg) or imperial (inch/ft/lbs) units for input and output.</p>
+                    </div>
+                    <div class="feature fadeInUp">
+                        <i class="fas fa-cog" style="color:var(--accent1)"></i>
+                        <h4>Multiple Metals</h4>
+                        <p>Supports steel, aluminum, cast iron, nickel, copper, brass, gold, silver, and many more.</p>
+                    </div>
+                    <div class="feature fadeInUp">
+                        <i class="fas fa-wifi-slash" style="color:#ef4444"></i>
+                        <h4>Works Offline</h4>
+                        <p>No internet connection required. All calculations are performed locally on your device.</p>
+                    </div>
+                    <div class="feature fadeInUp">
+                        <i class="fas fa-calculator" style="color:#10b981"></i>
+                        <h4>Fast & Simple</h4>
+                        <p>Clean, intuitive interface designed for quick and accurate calculations with zero learning curve.</p>
+                    </div>
+                    <div class="feature fadeInUp">
+                        <i class="fas fa-file-invoice" style="color:#f97316"></i>
+                        <h4>Cost & Estimate</h4>
+                        <p>Set and save price per kg or lb for each metal — get total cost and generate estimates instantly.</p>
+                    </div>
+                </div>
+
+                </div>
+            </section>
+
+            <section id="extension-install" style="margin-top:20px">
+                <h3>⬇️ Download the App</h3>
+                <div class="panel fadeInUp" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+                    <p class="small" style="flex:1;min-width:240px;margin:0">Available now on the Microsoft Store — completely free to download and use.</p>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap">
+                        <a href="https://apps.microsoft.com/store/detail/9MX3W15K2V85?cid=DevShareMWAPCS" target="_blank" rel="noopener noreferrer" class="cta primary"><i class="fab fa-microsoft"></i> Microsoft Store</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div><!-- /.wrap -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="brand">
+                        <div class="brand-mark"><img src="images/logo.png" alt="MRGARGSIR Tools"></div>
+                        <div class="brand-text">
+                            <strong>MRGARGSIR Tools</strong>
+                            <span>Civil Sahayak Tool & Extensions</span>
+                        </div>
+                    </a>
+                    <p>Always by your side — your civil engineering sahayak for HEWP. An independent automation toolkit for engineers and contractors working with the Haryana Engineering Works Portal — built to cut estimation and billing work by 90%.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+                        
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank" rel="noopener noreferrer" title="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <ul>
+                        <li><a href="../index.html#features">HEWP Excel Tool</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="purchase.html">Pricing & purchase</a></li>
+                        <li><a href="tutorials.html">Tutorials & setup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Extensions</h5>
+                    <ul>
+                        <li><a href="extension-chrome.html">Chrome / Edge Extension</a></li>
+                        <li><a href="extension-whatsapp.html">WhatsApp Sender</a></li>
+                        <li><a href="extension-macro.html">Web Automation Macro</a></li>
+                        <li><a href="metalweightcal.html">Metal Weight Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="mailto:civilSahayak@gmail.com">civilSahayak@gmail.com</a></li>
+                        <li><a href="https://wa.me/919728532828" target="_blank" rel="noopener noreferrer">+91 97285 32828</a></li>
+                        <li><a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank" rel="noopener noreferrer">WhatsApp community</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <strong>Important disclaimer:</strong> This is an independent third-party tool, not affiliated with, endorsed by, or connected to the HEWP portal or any government department.
+            </div>
+            <div class="footer-bottom">
+                <span>© MRGARGSIR 2026 — All rights reserved</span>
+                <span>Made for Engineers, JEs & Contractors across Haryana</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="scrollTopBtn" aria-label="Back to top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/site.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: add fresh Google Search Console verification code for civilsahayak.github.io -->
+    <!-- <meta name="google-site-verification" content="PASTE_NEW_VERIFICATION_CODE_HERE" /> -->
+    <title>Tutorials & Installation Guide — Civil Sahayak Tool by MRGARGSIR</title>
+    <meta name="description" content="Learn Civil Sahayak Tool step by step — video tutorials, installation guide, system requirements, and a before/after look at your HEWP workflow.">
+    <meta name="keywords"
+        content="Civil Sahayak Tool, HEWP Excel Addins, Estimate, import, pdf to excel, import in excel, HEWP Tool, Excel addin, HEWP tutorials, HEWP WhatsApp, HEWP YouTube, billing, bill, boq tool, mrgargsir, tools by mrgargsir, BOQ preparation tool, building estimation tool, Metal Weight Calculator, contractor billing software, civil engineering Excel tools, third party Excel tools, automated estimation software, mrgargsir tools, hewptool, civilsahayak, variation tool, mrgargsir store" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://civilsahayak.github.io/civilsahayak/tool/tutorials.html" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#0f1720">
+    <meta name="msapplication-TileImage" content="images/mstile-144x144.png">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#06b6d4">
+    <meta name="theme-color" content="#0f1720">
+    <meta name="msapplication-navbutton-color" content="#0f1720">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <canvas id="threejs-canvas"></canvas>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <div id="scroll-progress"></div>
+
+    <div class="floating-social">
+        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer" class="floating-social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+        
+        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank" rel="noopener noreferrer" class="floating-social-btn whatsapp-group" title="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://whatsapp.com/channel/0029VbBYrvx47XeIXLM2PU3u" target="_blank" rel="noopener noreferrer" class="floating-social-btn whatsapp-channel" title="WhatsApp Channel"><i class="fas fa-bullhorn"></i></a>
+    </div>
+
+    <div class="wrap">
+        <header>
+            <a href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;">
+                <div class="brand">
+                    <div class="logo pulse">
+                        <img src="images/logo.png" alt="MRGARGSIR Tools" style="width:100%;height:100%;object-fit:contain;padding:0px;">
+                    </div>
+                    <div>
+                        <h1>Civil Sahayak Tool</h1>
+                        <p>(Your Civil Engineering Sahayak — Help At Every Step)</p>
+                        <p>By MRGARGSIR</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <a class="nav-btn" href="../index.html">Home</a>
+                <a class="nav-btn" href="../index.html#features">Features</a>
+                <div class="nav-dropdown">
+                    <button class="nav-btn nav-dropdown-trigger"><i class="fas fa-puzzle-piece"></i> Extensions <i class="fas fa-chevron-down" style="font-size:10px"></i></button>
+                    <div class="nav-dropdown-menu">
+                    <a href="extension-chrome.html"><i class="fab fa-chrome"></i> Chrome/Edge Utility</a>
+                    <a href="extension-whatsapp.html"><i class="fab fa-whatsapp"></i> WhatsApp Sender</a>
+                    <a href="extension-macro.html"><i class="fas fa-robot"></i> Web Automation Macro</a>
+                    <a href="metalweightcal.html"><i class="fas fa-weight-scale"></i> Metal Weight Calculator</a>
+                    </div>
+                </div>
+                <a class="nav-btn primary" href="tutorials.html">Tutorials</a>
+                <a class="nav-btn" href="download.html">Download</a>
+                <a class="nav-btn" href="purchase.html">Purchase</a>
+                <button class="nav-btn" id="contactBtn"><i class="fas fa-envelope"></i> Contact</button>
+                <button class="theme-toggle" id="themeToggleBtn" title="Toggle light / dark theme" aria-pressed="false">
+                    <span class="knob"><i class="fas fa-moon"></i></span>
+                </button>
+            </nav>
+
+            <div class="contact-modal" id="contactModal">
+                <h3><i class="fas fa-headset"></i> Contact Support</h3>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="label">Email</div>
+                        <div class="value">civilSahayak@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="label">WhatsApp</div>
+                        <div class="value">+91 9728532828</div>
+                    </div>
+                </div>
+
+                <div class="contact-actions">
+                    <button class="contact-btn email" id="emailBtn">
+                        <i class="fas fa-paper-plane"></i> Send Email
+                    </button>
+                    <button class="contact-btn whatsapp" id="whatsappBtn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </button>
+                    <button class="contact-btn whatsapp" id="whatsappgroupBtn">
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer"  title="WhatsApp Group">
+                            <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+                        </a>
+                    </button>
+                </div>
+
+                <!-- 👉 Social Media Links -->
+                <div class="social-divider">
+                    <h4><i class="fas fa-share-nodes"></i> Follow Us</h4>
+                    <div class="social-links-modal">
+                        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer"
+                            class="social-btn facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer" class="social-btn whatsapp-group" title="WhatsApp Group">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbBYrvx47XeIXLM2PU3u" target="_blank"
+                            rel="noopener noreferrer" class="social-btn whatsapp-channel" title="WhatsApp Channel">
+                            <i class="fas fa-bullhorn"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        </header>
+
+
+        <main>
+            <div class="crumb-bar"><a href="../index.html">Home</a> <span>/</span> <span>Tutorials & Setup</span></div>
+            <div class="page-hero fadeInUp">
+                <h2>📚 Tutorials & Setup Guide</h2>
+                <p>Everything you need to install, configure and master Civil Sahayak Tool — videos, step-by-step guide and system requirements.</p>
+            </div>
+
+            <div class="page-tabs">
+                <a class="page-tab active" href="#videos">🎥 Video Tutorials</a>
+                <a class="page-tab" href="#installation">📦 Installation Guide</a>
+                <a class="page-tab" href="#requirements">💻 System Requirements</a>
+                <a class="page-tab" href="#before-after">⚖️ Before vs After</a>
+            </div>
+
+        <section id="videos">
+            <h3>🎥 Video Tutorials</h3>
+            <div class="two-col">
+                <div class="fadeInLeft">
+                    <div class="video-container" style="aspect-ratio:16/9; width:100%; background:#000; border-radius:16px; overflow:hidden;">
+                        <iframe id="mainVideoFrame" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/AUGClE_q9IY" title="E. Tool Promo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="width:100%; height:100%; border:0; border-radius:16px;">
+                        </iframe>
+                    </div>
+                    <p class="small" style="margin-top:15px;text-align:center;color:var(--accent2)">
+                        <i class="fas fa-youtube"></i> All tutorials available on our
+                        <a href="https://www.youtube.com/watch?v=m73zY87xw6s&list=PLCbMlKNK4S80cjerEh8_Fy19SYs13wGXq&index=3"
+                            target="_blank" style="color:var(--accent1);text-decoration:underline">YouTube Channel</a>
+                    </p>
+                    <div style="margin-top:16px;text-align:center">
+                        
+                    </div>
+                </div>
+
+                <div class="fadeInRight">
+                    <h4 style="margin-top:0">📚 Available Tutorials</h4>
+                    <!-- 👇 FINGER: All 10 video cards — click to load in left iframe -->
+                    <div class="video-list-container">
+                        
+                        <div class="feature video-card" data-video-id="AUGClE_q9IY" style="cursor:pointer">
+                            <div style="display:flex;align-items:center;gap:10px">
+                                <i class="fas fa-play-circle" style="color:var(--accent2);font-size:24px"></i>
+                                <div style="flex:1">
+                                    <h4 style="margin:0">E. Tool Tab Features Promo</h4>
+                                    <p class="small" style="margin:3px 0 0">Everything with Just One Click</p>
+                                </div>
+                                <i class="fas fa-external-link-alt" style="color:var(--muted);font-size:14px"></i>
+                            </div>
+                        </div>
+                        <div class="feature video-card" data-video-id="-N_-BZdy3hE" style="cursor:pointer">
+                            <div style="display:flex;align-items:center;gap:10px">
+                                <i class="fas fa-play-circle" style="color:var(--accent2);font-size:24px"></i>
+                                <div style="flex:1">
+                                    <h4 style="margin:0">Web Tool Tab Features Promo</h4>
+                                    <p class="small" style="margin:3px 0 0">Everything with Just One Click</p>
+                                </div>
+                                <i class="fas fa-external-link-alt" style="color:var(--muted);font-size:14px"></i>
+                            </div>
+                        </div>
+                        <div class="feature video-card" data-video-id="m73zY87xw6s" style="cursor:pointer">
+                            <div style="display:flex;align-items:center;gap:10px">
+                                <i class="fas fa-play-circle" style="color:var(--accent1);font-size:24px"></i>
+                                <div style="flex:1">
+                                    <h4 style="margin:0">Complete Installation Walkthrough</h4>
+                                    <p class="small" style="margin:3px 0 0">Step-by-step installation guide (5 min)</p>
+                                </div>
+                                <i class="fas fa-external-link-alt" style="color:var(--muted);font-size:14px"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="feature video-card" data-video-id="ChAsdEFmwww" style="cursor:pointer">
+                            <div style="display:flex;align-items:center;gap:10px">
+                                <i class="fas fa-play-circle" style="color:var(--accent2);font-size:24px"></i>
+                                <div style="flex:1">
+                                    <h4 style="margin:0">Bill Est Compare & Portal Bill Download</h4>
+                                    <p class="small" style="margin:3px 0 0">Everything with Just One Click</p>
+                                </div>
+                                <i class="fas fa-external-link-alt" style="color:var(--muted);font-size:14px"></i>
+                            </div>
+                        </div>
+                        <div class="feature video-card" data-video-id="saAwyBmC3G0" style="cursor:pointer">
+                            <div style="display:flex;align-items:center;gap:10px">
+                                <i class="fas fa-play-circle" style="color:var(--accent2);font-size:24px"></i>
+                                <div style="flex:1">
+                                    <h4 style="margin:0">Auto Upload Bill in Contractor ID</h4>
+                                    <p class="small" style="margin:3px 0 0">Everything with Just One Click</p>
+                                </div>
+                                <i class="fas fa-external-link-alt" style="color:var(--muted);font-size:14px"></i>
+                            </div>
+                        </div>
+                        <div class="feature video-card" data-video-id="eBoGeBiaTrE" style="cursor:pointer">
+                            <div style="display:flex;align-items:center;gap:10px">
+                                <i class="fas fa-play-circle" style="color:var(--accent2);font-size:24px"></i>
+                                <div style="flex:1">
+                                    <h4 style="margin:0">Auto Delete Bill in Contractor ID</h4>
+                                    <p class="small" style="margin:3px 0 0">Everything with Just One Click</p>
+                                </div>
+                                <i class="fas fa-external-link-alt" style="color:var(--muted);font-size:14px"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="installation">
+            <h3>📦 Easy Installation Guide</h3>
+            <div class="panel fadeInUp">
+                <p class="small" style="margin-bottom:25px">Follow these simple steps to install Estimation &
+                    Billing Tool. The entire process takes approx 5 minutes and requires no technical expertise.</p>
+
+                <div class="install-steps">
+                    <div class="install-step fadeInUp">
+                        <h4>Download the Installer</h4>
+                        <p>Click the download button to get Installer.exe. The installer includes Excel Tool,
+                            HEWP Edge Extension and dependencies.</p>
+                    </div>
+                    <div class="install-step fadeInUp">
+                        <h4>Run the Installer</h4>
+                        <p>Double-click the downloaded file and follow the on-screen instructions. Accept the default
+                            settings for the easiest installation.</p>
+                    </div>
+                    <div class="install-step fadeInUp">
+                        <h4>Enable Excel Tool if required</h4>
+                        <p>Open Excel and check the ribbon. You'll see new tabs: "Auto E. Tool", "Templates", "HEWP
+                            Auto", "HEWP Manual", "Extra Tool", "Tool Help", "Tool Settings" etc. with all the features
+                            ready to use.</p>
+                    </div>
+                    <div class="install-step fadeInUp">
+                        <h4>Install HEWP Edge Extension (Optional)</h4>
+                        <p>During installation, you'll be prompted to add the HEWP Edge Extension. Click "Add to
+                            Chrome" when prompted for enhanced portal features. For Edge Extension, search hewp
+                            extension in edge store.</p>
+                    </div>
+                    <div class="install-step fadeInUp">
+                        <h4>Tool Settings</h4>
+                        <p>Activate the Tool if asked. Then first set the Unit, Browser & District as per your choice
+                            and restart Excel.</p>
+                    </div>
+                    <div class="install-step fadeInUp">
+                        <h4>Start Working!</h4>
+                        <p>Open any Bill or Estimate and start using the Tool. Auto-updates are enabled by default to
+                            keep you current with latest features.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top:25px;padding:15px;background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.2);border-radius:10px;">
+                    <strong style="color:#ef4444">⚠️ Before You Install:</strong>
+                    <ul class="small" style="margin:10px 0 0 20px;color:#d5ddea">
+                        <li>✅ Save & Close all Microsoft Excel windows</li>
+                        <li>✅ Have your unique install key ready</li>
+                        <li>✅ During Installation, If Windows shows security warning, click "More info" → "Run anyway"
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="margin-top:20px;text-align:center">
+                    <a href="download.html" class="cta primary">
+                        <i class="fas fa-download"></i> Go to Download Page
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="requirements">
+            <h3>💻 System Requirements</h3>
+            <div class="comparison fadeInUp">
+                <div class="comparison-item before fadeInLeft">
+                    <h4 class="comparison-title">Minimum Requirements</h4>
+                    <ul class="comparison-list small">
+                        <li>Windows 7 / 8 / 10 / 11</li>
+                        <li>Microsoft Excel 2016 or later</li>
+                        <li>Google Chrome browser OR Edge</li>
+                        <li>4GB RAM</li>
+                        <li>500MB free disk space</li>
+                    </ul>
+                </div>
+                <div class="comparison-item after fadeInRight">
+                    <h4 class="comparison-title">Recommended</h4>
+                    <ul class="comparison-list small">
+                        <li>Windows 10 / 11</li>
+                        <li>Microsoft Excel 2019 /
+                            <a href="https://github.com/mrgargsir/msofficeLTSC2021/releases/download/26.1/All.in.One.Installation.bat"
+                                target="_blank" rel="noopener noreferrer">2021</a> / 365
+                        </li>
+                        <li>Latest Chrome/Edge browser</li>
+                        <li>8GB RAM</li>
+                        <li>1GB free disk space</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="before-after">
+            <h3>⚖️ Before vs After</h3>
+            <div class="comparison">
+                <div class="comparison-item before fadeInLeft">
+                    <h4 class="comparison-title">Before Civil Sahayak Tool</h4>
+                    <ul class="comparison-list small">
+                        <li>Manual HSR item numbers search</li>
+                        <li>Manual HSR lookup in bulky PDF documents</li>
+                        <li>Copy-paste errors between Excel and portal</li>
+                        <li>Material Quantity Factors</li>
+                        <li>Look for Material Rates each time</li>
+                        <li>Hours spent on portal navigation and data entry</li>
+                        <li>Manual unit conversions with high error risk</li>
+                        <li>Manual Variation calculations and Uploading</li>
+                        <li>No standardization in estimate formats</li>
+                        <li>Difficulty comparing bills and estimates</li>
+                        <li>Frustration with portal interface limitations</li>
+                        <li>No automated calculations for GST and contingencies</li>
+                        <li>Manual steel weight calculations</li>
+                        <li>Repetitive template preparation for each project</li>
+                    </ul>
+                </div>
+                <div class="comparison-item after fadeInRight">
+                    <h4 class="comparison-title">After Civil Sahayak Tool</h4>
+                    <ul class="comparison-list small">
+                        <li>Instant Import Detailed Estimates Pdf from Portal to Excel</li>
+                        <li>Instant HSR search with auto-fill of details</li>
+                        <li>Smart copy-paste with automatic data arrangement</li>
+                        <li>One-Click Material Quantity Table Preparation</li>
+                        <li>One-Click to get or update Material Rates (District wise)</li>
+                        <li>One-click upload with auto-login to portal</li>
+                        <li>Automatic unit conversions with zero errors</li>
+                        <li>Automatic Variation calculations and Uploading</li>
+                        <li>Standardized templates with HSR 2023 structure</li>
+                        <li>Automatic bill comparison and difference highlighting</li>
+                        <li>Enhanced portal experience with Chrome/Edge extension</li>
+                        <li>Automated calculations for amounts, GST, contingencies</li>
+                        <li>One-click steel weight calculator</li>
+                        <li>Reusable templates with preloaded HSR data</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+            <div style="text-align:center;margin-bottom:40px">
+                <a href="../index.html" class="cta secondary" style="margin-right:12px">
+                    <i class="fas fa-arrow-left"></i> Back to Main Page
+                </a>
+                <a href="purchase.html" class="cta primary">
+                    <i class="fas fa-tag"></i> View Pricing
+                </a>
+            </div>
+        </main>
+    </div><!-- /.wrap -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="brand">
+                        <div class="brand-mark"><img src="images/logo.png" alt="MRGARGSIR Tools"></div>
+                        <div class="brand-text">
+                            <strong>MRGARGSIR Tools</strong>
+                            <span>Civil Sahayak Tool & Extensions</span>
+                        </div>
+                    </a>
+                    <p>Always by your side — your civil engineering sahayak for HEWP. An independent automation toolkit for engineers and contractors working with the Haryana Engineering Works Portal — built to cut estimation and billing work by 90%.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+                        
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank" rel="noopener noreferrer" title="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <ul>
+                        <li><a href="../index.html#features">HEWP Excel Tool</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="purchase.html">Pricing & purchase</a></li>
+                        <li><a href="tutorials.html">Tutorials & setup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Extensions</h5>
+                    <ul>
+                        <li><a href="extension-chrome.html">Chrome / Edge Extension</a></li>
+                        <li><a href="extension-whatsapp.html">WhatsApp Sender</a></li>
+                        <li><a href="extension-macro.html">Web Automation Macro</a></li>
+                        <li><a href="metalweightcal.html">Metal Weight Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="mailto:civilSahayak@gmail.com">civilSahayak@gmail.com</a></li>
+                        <li><a href="https://wa.me/919728532828" target="_blank" rel="noopener noreferrer">+91 97285 32828</a></li>
+                        <li><a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank" rel="noopener noreferrer">WhatsApp community</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <strong>Important disclaimer:</strong> This is an independent third-party tool, not affiliated with, endorsed by, or connected to the HEWP portal or any government department.
+            </div>
+            <div class="footer-bottom">
+                <span>© MRGARGSIR 2026 — All rights reserved</span>
+                <span>Made for Engineers, JEs & Contractors across Haryana</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="scrollTopBtn" aria-label="Back to top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/site.js"></script>
+</body>
+
+</html>

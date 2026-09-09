@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: add fresh Google Search Console verification code for civilsahayak.github.io -->
+    <!-- <meta name="google-site-verification" content="PASTE_NEW_VERIFICATION_CODE_HERE" /> -->
+    <title>Purchase & Pricing — Civil Sahayak Tool by MRGARGSIR</title>
+    <meta name="description"
+        content="Civil Sahayak Tool plans — pick the license that fits your workload. Regular and Premium plans for 30, 180 and 365 days, plus a free trial for new users.">
+    <meta name="keywords"
+        content="Civil Sahayak Tool, HEWP Excel Addins, Estimate, import, pdf to excel, import in excel, HEWP Tool, Excel addin, HEWP tutorials, HEWP WhatsApp, HEWP YouTube, billing, bill, boq tool, mrgargsir, tools by mrgargsir, BOQ preparation tool, building estimation tool, Metal Weight Calculator, contractor billing software, civil engineering Excel tools, third party Excel tools, automated estimation software, mrgargsir tools, hewptool, civilsahayak, variation tool, mrgargsir store" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://civilsahayak.github.io/civilsahayak/tool/purchase.html" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#0f1720">
+    <meta name="msapplication-TileImage" content="images/mstile-144x144.png">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#06b6d4">
+    <meta name="theme-color" content="#0f1720">
+    <meta name="msapplication-navbutton-color" content="#0f1720">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <canvas id="threejs-canvas"></canvas>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <div id="scroll-progress"></div>
+
+    <div class="floating-social">
+        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer"
+            class="floating-social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+        
+        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank" rel="noopener noreferrer"
+            class="floating-social-btn whatsapp-group" title="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://whatsapp.com/channel/0029VbBYrvx47XeIXLM2PU3u" target="_blank" rel="noopener noreferrer"
+            class="floating-social-btn whatsapp-channel" title="WhatsApp Channel"><i class="fas fa-bullhorn"></i></a>
+    </div>
+
+    <div class="wrap">
+        <header>
+            <a href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;">
+                <div class="brand">
+                    <div class="logo pulse">
+                        <img src="images/logo.png" alt="MRGARGSIR Tools"
+                            style="width:100%;height:100%;object-fit:contain;padding:0px;">
+                    </div>
+                    <div>
+                        <h1>Civil Sahayak Tool</h1>
+                        <p>(Your Civil Engineering Sahayak — Help At Every Step)</p>
+                        <p>By MRGARGSIR</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <a class="nav-btn" href="../index.html">Home</a>
+                <a class="nav-btn" href="../index.html#features">Features</a>
+                <div class="nav-dropdown">
+                    <button class="nav-btn nav-dropdown-trigger"><i class="fas fa-puzzle-piece"></i> Extensions <i
+                            class="fas fa-chevron-down" style="font-size:10px"></i></button>
+                    <div class="nav-dropdown-menu">
+                        <a href="extension-chrome.html"><i class="fab fa-chrome"></i> Chrome/Edge Utility</a>
+                        <a href="extension-whatsapp.html"><i class="fab fa-whatsapp"></i> WhatsApp Sender</a>
+                        <a href="extension-macro.html"><i class="fas fa-robot"></i> Web Automation Macro</a>
+                        <a href="metalweightcal.html"><i class="fas fa-weight-scale"></i> Metal Weight Calculator</a>
+                    </div>
+                </div>
+                <a class="nav-btn" href="tutorials.html">Tutorials</a>
+                <a class="nav-btn" href="download.html">Download</a>
+                <a class="nav-btn primary" href="purchase.html">Purchase</a>
+                <button class="nav-btn" id="contactBtn"><i class="fas fa-envelope"></i> Contact</button>
+                <button class="theme-toggle" id="themeToggleBtn" title="Toggle light / dark theme" aria-pressed="false">
+                    <span class="knob"><i class="fas fa-moon"></i></span>
+                </button>
+            </nav>
+
+            <div class="contact-modal" id="contactModal">
+                <h3><i class="fas fa-headset"></i> Contact Support</h3>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="label">Email</div>
+                        <div class="value">civilSahayak@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="label">WhatsApp</div>
+                        <div class="value">+91 9728532828</div>
+                    </div>
+                </div>
+
+                <div class="contact-actions">
+                    <button class="contact-btn email" id="emailBtn">
+                        <i class="fas fa-paper-plane"></i> Send Email
+                    </button>
+                    <button class="contact-btn whatsapp" id="whatsappBtn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </button>
+                    <button class="contact-btn whatsapp" id="whatsappgroupBtn">
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer" title="WhatsApp Group">
+                            <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+                        </a>
+                    </button>
+                </div>
+
+                <!-- 👉 Social Media Links -->
+                <div class="social-divider">
+                    <h4><i class="fas fa-share-nodes"></i> Follow Us</h4>
+                    <div class="social-links-modal">
+                        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer"
+                            class="social-btn facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer" class="social-btn whatsapp-group" title="WhatsApp Group">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbBYrvx47XeIXLM2PU3u" target="_blank"
+                            rel="noopener noreferrer" class="social-btn whatsapp-channel" title="WhatsApp Channel">
+                            <i class="fas fa-bullhorn"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+        <main>
+            <div class="crumb-bar"><a href="../index.html">Home</a> <span>/</span> <span>Purchase</span></div>
+            <div class="page-hero fadeInUp">
+                <h2>💰 Purchase a License</h2>
+                <p>Choose Regular or Premium, pick a duration, scan the UPI QR code and you're done. Compare what's
+                    included in each plan on the right.</p>
+            </div>
+
+            <div class="purchase-columns">
+                <div>
+                    <section id="pricing" style="margin-top:20px">
+                        <h3 style="text-align:center;font-size:18px;margin-bottom:20px">💰 Pricing </h3>
+                        <!-- 🖐️ TRIAL BANNER — toggle PREMIUM_TRIAL_MODE in site.js to switch between these two -->
+                        <div class="panel fadeInUp"
+                            style="text-align:center;background:linear-gradient(135deg,rgba(16,185,129,0.12),rgba(6,182,212,0.08));border:1px solid rgba(16,185,129,0.3);margin-bottom:20px">
+                            <div style="padding:2px 2px">
+
+                                <!-- PAID VARIANT -->
+                                <div id="trialBannerPaid" style="display:none">
+                                    <div style="font-size:22px;font-weight:800;color:var(--accent5);margin-bottom:6px">
+                                        🎁 1 Month Premium Trial — For All Users!
+                                    </div>
+                                    <p style="color:var(--muted);margin:0 0 6px;font-size:14px">
+                                        Get full <strong style="color:white">Premium access</strong> for 30 days — All
+                                        users.
+                                    </p>
+                                    <p style="color:var(--muted);margin:0 0 14px;font-size:12px">No hidden charges ·
+                                        One-time
+                                        payment · Full features unlocked</p>
+                                    <button onclick="openQR('99','30 Days Trial - Premium')"
+                                        style="display:inline-flex;align-items:center;gap:8px;font-size:15px;padding:12px 28px;background:linear-gradient(90deg,var(--accent5),var(--accent2));border:none;color:white;border-radius:10px;font-weight:700;cursor:pointer;transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.05)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+                                        <i class="fas fa-crown"></i> Get Premium Trial @ ₹99
+                                    </button>
+                                    <div
+                                        style="margin-top:14px;padding:10px 14px;background:rgba(244,63,94,0.1);border:1px solid rgba(244,63,94,0.35);border-radius:10px;font-size:12px;color:#fda4af;display:inline-flex;align-items:flex-start;gap:8px;max-width:420px;text-align:center">
+                                        <i class="fas fa-exclamation-triangle"
+                                            style="color:#f43f5e;margin-top:2px;flex-shrink:0"></i>
+                                        <span>
+                                            <strong style="color:#f43f5e">Trial Purchasae is only applicable once per
+                                                computer</strong>
+                                            <br> Payments once made are non-refundable for this trial. Please confirm
+                                            your
+                                            eligibility before purchasing.</span>
+                                    </div>
+                                </div>
+
+                                <!-- FREE VARIANT -->
+                                <div id="trialBannerFree" style="display:none">
+                                    <div style="font-size:22px;font-weight:800;color:var(--accent5);margin-bottom:6px">
+                                        🎁 1 Month Premium Trial — Free For New Users!
+                                    </div>
+                                    <p style="color:var(--muted);margin:0 0 6px;font-size:14px">
+                                        Get full <strong style="color:white">Premium access</strong> for 30 days —
+                                        completely free for new users.
+                                    </p>
+                                    <p style="color:var(--muted);margin:0 0 14px;font-size:12px">Download & install the
+                                        tool, then submit your trial request from Excel via Tool.</p>
+                                    <button onclick="downloadInstallerOnly(event)"
+                                        style="display:inline-flex;align-items:center;gap:8px;font-size:15px;padding:12px 28px;background:linear-gradient(90deg,var(--accent5),var(--accent2));border:none;color:white;border-radius:10px;font-weight:700;cursor:pointer;transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.05)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+                                        <i class="fas fa-download"></i> Download & Get Trial
+                                    </button>
+                                    <div
+                                        style="margin-top:14px;padding:10px 14px;background:rgba(244,63,94,0.1);border:1px solid rgba(244,63,94,0.35);border-radius:10px;font-size:12px;color:#fda4af;display:inline-flex;align-items:flex-start;gap:8px;max-width:420px;text-align:center">
+                                        <i class="fas fa-exclamation-triangle"
+                                            style="color:#f43f5e;margin-top:2px;flex-shrink:0"></i>
+                                        <span>
+                                            <strong style="color:#f43f5e">Trial is only applicable once per
+                                                computer</strong>
+                                            <br> You will get instant Temporary Key on Email if applicable.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 🖐️ PLAN SELECTOR TABS — new -->
+                        <div style="display:flex;justify-content:center;gap:10px;margin-bottom:20px;flex-wrap:wrap">
+
+                            <button onclick="switchPlan('regular')" id="tab-regular"
+                                style="padding:9px 22px;border-radius:20px;border:1.5px solid rgba(249,115,22,0.5);background:rgba(249,115,22,0.12);color:#f97316;font-weight:700;font-size:13px;cursor:pointer;transition:all 0.3s">
+                                🔵 Regular
+                            </button>
+                            <button onclick="switchPlan('premium')" id="tab-premium"
+                                style="padding:9px 22px;border-radius:20px;border:1.5px solid rgba(124,58,237,0.6);background:rgba(124,58,237,0.2);color:#a78bfa;font-weight:700;font-size:13px;cursor:pointer;transition:all 0.3s">
+                                👑 Premium
+                            </button>
+                        </div>
+
+                        <!-- 🖐️ REGULAR PLAN CARDS -->
+                        <div id="plan-regular" style="display:none;flex-direction:column;gap:14px">
+                            <!-- Regular 30 Days -->
+                            <div class="panel fadeInUp"
+                                style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1px solid rgba(249,115,22,0.25)">
+                                <div>
+                                    <div style="font-size:16px;font-weight:700;margin-bottom:4px"><i
+                                            class="fas fa-calendar-day"
+                                            style="color:var(--accent3);margin-right:8px"></i>30
+                                        Days — Regular</div>
+                                    <div style="font-size:12px;color:var(--muted)">Estimate Preparation + Analysis
+                                        features
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:14px">
+                                    <div style="text-align:right">
+                                        <!-- 🖐️ Extra 5% OFF for Regular -->
+                                        <!--
+                                    <div style="font-size:11px;margin-bottom:2px">
+                                       
+                                        <span
+                                            style="background:#f97316;color:white;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">5%
+                                            OFF</span>
+                                        <span
+                                        
+                                            style="color:var(--muted);text-decoration:line-through;margin-left:5px">₹499</span>
+                                    </div>
+                                    -->
+                                        <div
+                                            style="font-size:26px;font-weight:900;background:linear-gradient(90deg,var(--accent3),var(--accent4));-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+                                            ₹499</div>
+                                    </div>
+                                    <button onclick="openQR('499','30 Days - Regular')"
+                                        style="background:linear-gradient(90deg,var(--accent3),var(--accent4));border:none;color:white;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.05)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+                                        <i class="fas fa-qrcode"></i> Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Regular 180 Days -->
+                            <div class="panel fadeInUp"
+                                style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1px solid rgba(249,115,22,0.4);position:relative;overflow:hidden">
+                                <div
+                                    style="position:absolute;top:0;right:0;background:var(--accent3);color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:0 0 0 10px">
+                                    POPULAR</div>
+                                <div>
+                                    <div style="font-size:16px;font-weight:700;margin-bottom:4px"><i
+                                            class="fas fa-calendar-week"
+                                            style="color:var(--accent3);margin-right:8px"></i>180 Days — Regular</div>
+                                    <div style="font-size:12px;color:var(--muted)">Best value · </div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:14px">
+                                    <div style="text-align:right">
+                                        <div style="font-size:11px;margin-bottom:2px">
+                                            <span
+                                                style="background:#f97316;color:white;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">₹100
+                                                OFF</span>
+                                            <span
+                                                style="color:var(--muted);text-decoration:line-through;margin-left:5px">₹2,799</span>
+                                        </div>
+                                        <div
+                                            style="font-size:26px;font-weight:900;background:linear-gradient(90deg,var(--accent3),var(--accent4));-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+                                            ₹2,699</div>
+                                    </div>
+                                    <button onclick="openQR('2699','180 Days - Regular')"
+                                        style="background:linear-gradient(90deg,var(--accent3),var(--accent4));border:none;color:white;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.05)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+                                        <i class="fas fa-qrcode"></i> Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Regular 365 Days -->
+                            <div class="panel fadeInUp"
+                                style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1px solid rgba(249,115,22,0.25)">
+                                <div>
+                                    <div style="font-size:16px;font-weight:700;margin-bottom:4px"><i
+                                            class="fas fa-calendar-alt"
+                                            style="color:var(--accent3);margin-right:8px"></i>365 Days — Regular</div>
+                                    <div style="font-size:12px;color:var(--muted)">Full year · Full Regular access</div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:14px">
+                                    <div style="text-align:right">
+                                        <div style="font-size:11px;margin-bottom:2px">
+                                            <span
+                                                style="background:#f97316;color:white;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">₹400
+                                                OFF</span>
+                                            <span
+                                                style="color:var(--muted);text-decoration:line-through;margin-left:5px">₹5,399</span>
+                                        </div>
+                                        <div
+                                            style="font-size:26px;font-weight:900;background:linear-gradient(90deg,var(--accent3),var(--accent4));-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+                                            ₹4,999</div>
+                                    </div>
+                                    <button onclick="openQR('4999','365 Days - Regular')"
+                                        style="background:linear-gradient(90deg,var(--accent3),var(--accent4));border:none;color:white;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.05)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+                                        <i class="fas fa-qrcode"></i> Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 🖐️ PREMIUM PLAN CARDS — same as before, now toggled -->
+                        <div id="plan-premium" style="display:flex;flex-direction:column;gap:14px">
+                            <!-- Premium 30 Days -->
+                            <div class="panel fadeInUp"
+                                style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1px solid rgba(124,58,237,0.25)">
+                                <div>
+                                    <div style="font-size:16px;font-weight:700;margin-bottom:4px"><i
+                                            class="fas fa-calendar-day"
+                                            style="color:var(--accent1);margin-right:8px"></i>30
+                                        Days — Premium</div>
+                                    <div style="font-size:12px;color:var(--muted)">Full access · All features included
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:14px">
+                                    <div style="text-align:right">
+                                        <!-- 🖐️ Extra 10% OFF for Premium -->
+                                        <div style="font-size:11px;margin-bottom:2px">
+                                            <span
+                                                style="background:#ef4444;color:white;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">₹50
+                                                OFF</span>
+                                            <span
+                                                style="color:var(--muted);text-decoration:line-through;margin-left:5px">₹649</span>
+                                        </div>
+                                        <div
+                                            style="font-size:26px;font-weight:900;background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+                                            ₹599</div>
+                                    </div>
+                                    <button onclick="openQR('599','30 Days - Premium')"
+                                        style="background:linear-gradient(90deg,var(--accent1),var(--accent2));border:none;color:white;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.05)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+                                        <i class="fas fa-qrcode"></i> Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Premium 180 Days -->
+                            <div class="panel fadeInUp"
+                                style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1px solid rgba(249,115,22,0.4);position:relative;overflow:hidden">
+                                <div
+                                    style="position:absolute;top:0;right:0;background:var(--accent3);color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:0 0 0 10px">
+                                    POPULAR</div>
+                                <div>
+                                    <div style="font-size:16px;font-weight:700;margin-bottom:4px"><i
+                                            class="fas fa-calendar-week"
+                                            style="color:var(--accent3);margin-right:8px"></i>180 Days — Premium</div>
+                                    <div style="font-size:12px;color:var(--muted)">Full access · Best value</div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:14px">
+                                    <div style="text-align:right">
+                                        <div style="font-size:11px;margin-bottom:2px">
+                                            <span
+                                                style="background:#ef4444;color:white;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">₹300
+                                                OFF</span>
+                                            <span
+                                                style="color:var(--muted);text-decoration:line-through;margin-left:5px">₹3,599</span>
+                                        </div>
+                                        <div
+                                            style="font-size:26px;font-weight:900;background:linear-gradient(90deg,var(--accent3),var(--accent4));-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+                                            ₹3,299</div>
+                                    </div>
+                                    <button onclick="openQR('3299','180 Days - Premium')"
+                                        style="background:linear-gradient(90deg,var(--accent3),var(--accent4));border:none;color:white;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.05)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+                                        <i class="fas fa-qrcode"></i> Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Premium 365 Days -->
+                            <div class="panel fadeInUp"
+                                style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1px solid rgba(6,182,212,0.25)">
+                                <div>
+                                    <div style="font-size:16px;font-weight:700;margin-bottom:4px"><i
+                                            class="fas fa-calendar-alt"
+                                            style="color:var(--accent2);margin-right:8px"></i>365 Days — Premium</div>
+                                    <div style="font-size:12px;color:var(--muted)">Full access · Full year coverage
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:14px">
+                                    <div style="text-align:right">
+                                        <div style="font-size:11px;margin-bottom:2px">
+                                            <span
+                                                style="background:#ef4444;color:white;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">₹600
+                                                OFF</span>
+                                            <span
+                                                style="color:var(--muted);text-decoration:line-through;margin-left:5px">₹6,599</span>
+                                        </div>
+                                        <div
+                                            style="font-size:26px;font-weight:900;background:linear-gradient(90deg,var(--accent2),var(--accent5));-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+                                            ₹5,999</div>
+                                    </div>
+                                    <button onclick="openQR('5999','365 Days - Premium')"
+                                        style="background:linear-gradient(90deg,var(--accent2),var(--accent5));border:none;color:white;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.05)'"
+                                        onmouseout="this.style.transform='scale(1)'">
+                                        <i class="fas fa-qrcode"></i> Buy Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 👆 Plan switcher handled by motion JS -->
+
+                        <p class="small" style="margin-top:20px;text-align:center;color:var(--muted)">
+                            <i class="fas fa-heart" style="color:#f43f5e"></i> Made with Dedication for HEWP users
+                        </p>
+                    </section>
+
+                    <!-- ============================================================
+     QR MODAL — Step 1: QR Code  |  Step 2: Form
+     ============================================================ -->
+                    <div id="qrModal"
+                        style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;align-items:flex-start;justify-content:center;backdrop-filter:blur(6px);overflow-y:auto;padding:20px 0">
+                        <div
+                            style="background:var(--bg-card);border-radius:20px;padding:0;text-align:center;max-width:420px;width:90%;border:1px solid var(--border-glass);position:relative;animation:fadeIn 0.3s ease;margin:auto;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px var(--shadow-color);">
+
+                            <!-- Close button -->
+                            <button onclick="closeQR()"
+                                style="position:absolute;top:14px;right:14px;background:var(--button-ghost-bg);border:1px solid var(--input-border);color:var(--text-soft);width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;transition:background 0.2s ease"
+                                onmouseover="this.style.background='var(--button-ghost-hover)'"
+                                onmouseout="this.style.background='var(--button-ghost-bg)'">✕</button>
+
+                            <!-- Progress bar -->
+                            <div
+                                style="padding:22px 28px 16px;border-bottom:1px solid var(--border-glass);flex-shrink:0">
+                                <div style="font-size:13px;color:var(--muted);margin-bottom:2px">Complete your purchase
+                                </div>
+                                <div id="qrPlanLabel"
+                                    style="font-size:19px;font-weight:800;color:var(--text-strong);margin-bottom:14px">
+                                </div>
+                                <div style="display:flex;align-items:center;gap:20px">
+                                    <div id="stepDot1" style="display:flex;align-items:center;gap:6px;flex:1">
+                                        <div
+                                            style="width:24px;height:24px;border-radius:50%;background:var(--accent2);color:#06121c;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                            1</div>
+                                        <span style="font-size:11px;font-weight:700;color:var(--text-strong)">Pay via
+                                            QR</span>
+                                    </div>
+                                    <div
+                                        style="flex:0 0 30px;height:2px;background:rgba(255,255,255,0.12);border-radius:2px;overflow:hidden">
+                                        <div id="stepProgressLine"
+                                            style="height:100%;width:0%;background:var(--accent2);transition:width 0.4s ease">
+                                        </div>
+                                    </div>
+                                    <div id="stepDot2"
+                                        style="display:flex;align-items:center;gap:6px;flex:1;opacity:0.45">
+                                        <div id="stepCircle2"
+                                            style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.1);color:var(--muted);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                            2</div>
+                                        <span style="font-size:11px;font-weight:700;color:var(--muted)">Your
+                                            Details</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Scrollable body -->
+                            <div style="overflow-y:auto;scrollbar-width:none;padding:24px 28px 28px">
+
+                                <!-- ========== STEP 1 — QR CODE ========== -->
+                                <div id="qrStep1">
+                                    <div
+                                        style="background:white;padding:14px;border-radius:16px;display:inline-block;margin-bottom:16px;box-shadow:0 8px 30px rgba(0,0,0,0.35)">
+                                        <img id="qrImage" src="" alt="Paytm QR Code"
+                                            style="width:220px;height:220px;display:block;border-radius:8px">
+                                    </div>
+                                    <p style="font-size:13px;color:var(--muted);margin:0 0 4px">Scan with <strong
+                                            style="color:var(--text-strong)">Paytm / BHIM / any UPI app</strong></p>
+                                    <p style="font-size:12px;color:var(--muted);margin:0 0 22px">Name : Sumit Garg</p>
+
+                                    <!-- Primary button – fixed -->
+                                    <button onclick="goToStep2()"
+                                        style="display:inline-flex;align-items:center;gap:8px;background:var(--gradient-main);color:white;padding:14px 24px;border-radius:12px;font-weight:800;font-size:15px;border:2px solid rgba(255,255,255,0.2);cursor:pointer;width:100%;justify-content:center;box-shadow:0 6px 24px var(--glow-color), inset 0 1px 0 rgba(255,255,255,0.15);transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 32px var(--glow-color), inset 0 1px 0 rgba(255,255,255,0.2)';"
+                                        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 24px var(--glow-color), inset 0 1px 0 rgba(255,255,255,0.15)';">
+                                        <i class="fas fa-check-circle" style="font-size:17px"></i> Continue — I have
+                                        Paid
+                                    </button>
+                                    <p style="font-size:11px;color:var(--muted);margin-top:14px;margin-bottom:0">
+                                        <i class="fas fa-arrow-down" style="color:var(--accent2)"></i> Next: enter your
+                                        details so we can verify payment & send your license
+                                    </p>
+                                </div>
+
+                                <!-- ========== STEP 2 — FORM ========== -->
+                                <div id="qrStep2" style="display:none;text-align:left">
+
+                                    <!-- Back button – fixed with visible background -->
+                                    <button onclick="backToStep1()"
+                                        style="background:var(--button-ghost-bg);border:1px solid var(--input-border);color:var(--accent2);font-size:12px;font-weight:700;cursor:pointer;padding:6px 14px;border-radius:6px;margin-bottom:14px;display:inline-flex;align-items:center;gap:5px;transition:all 0.2s ease"
+                                        onmouseover="this.style.background='var(--button-ghost-hover)'"
+                                        onmouseout="this.style.background='var(--button-ghost-bg)'">
+                                        <i class="fas fa-arrow-left"></i> Back to QR Code
+                                    </button>
+
+                                    <div
+                                        style="display:flex;align-items:center;gap:10px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:10px;padding:10px 12px;margin-bottom:18px">
+                                        <i class="fas fa-check-circle" style="color:#10b981;font-size:16px"></i>
+                                        <span style="font-size:12px;color:var(--text-soft)">Now enter your payment &
+                                            contact details below</span>
+                                    </div>
+
+                                    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px">
+
+                                        <!-- Full Name -->
+                                        <div>
+                                            <label
+                                                style="font-size:12px;color:var(--text-strong);font-weight:700;margin-bottom:4px;display:block">
+                                                Full Name <span style="color:var(--accent4)">*</span>
+                                                <span style="color:var(--muted);font-size:11px;font-weight:400;">(e.g.
+                                                    Ramesh Kumar)</span>
+                                            </label>
+                                            <input id="buyerName" type="text" placeholder=""
+                                                style="width:100%;padding:9px 12px;border-radius:8px;background:var(--input-bg);border:1px solid var(--input-border);color:var(--text-strong);font-size:14px;font-weight:700;outline:none;box-sizing:border-box;transition:border 0.2s"
+                                                onfocus="this.style.borderColor='var(--accent2)'"
+                                                onblur="this.style.borderColor='var(--input-border)'">
+                                        </div>
+
+                                        <!-- Mobile -->
+                                        <div>
+                                            <label
+                                                style="font-size:12px;color:var(--text-strong);font-weight:700;margin-bottom:4px;display:block">
+                                                Mobile Number <span style="color:var(--accent4)">*</span>
+                                                <span style="color:var(--muted);font-size:11px;font-weight:400;">(e.g.
+                                                    9876543210)</span>
+                                            </label>
+                                            <input id="buyerMobile" type="tel" placeholder="" maxlength="10"
+                                                style="width:100%;padding:9px 12px;border-radius:8px;background:var(--input-bg);border:1px solid var(--input-border);color:var(--text-strong);font-size:14px;font-weight:700;outline:none;box-sizing:border-box;transition:border 0.2s"
+                                                onfocus="this.style.borderColor='var(--accent2)'"
+                                                onblur="this.style.borderColor='var(--input-border)'">
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div>
+                                            <label
+                                                style="font-size:12px;color:var(--text-strong);font-weight:700;margin-bottom:4px;display:block">
+                                                Email Address <span style="color:var(--accent4)">*</span>
+                                                <span style="color:var(--muted);font-size:11px;font-weight:400;">(You
+                                                    will receive License key on email)</span>
+                                            </label>
+                                            <input id="buyerEmail" type="email" placeholder=""
+                                                style="width:100%;padding:9px 12px;border-radius:8px;background:var(--input-bg);border:1px solid var(--input-border);color:var(--text-strong);font-size:14px;font-weight:700;outline:none;box-sizing:border-box;transition:border 0.2s"
+                                                onfocus="this.style.borderColor='var(--accent2)'"
+                                                onblur="this.style.borderColor='var(--input-border)'">
+                                        </div>
+
+                                        <!-- District -->
+                                        <div>
+                                            <label
+                                                style="font-size:12px;color:var(--text-strong);font-weight:700;margin-bottom:4px;display:block">
+                                                District <span style="color:var(--accent4)">*</span>
+                                                <span style="color:var(--muted);font-size:11px;font-weight:400;">(e.g.
+                                                    Rohtak)</span>
+                                            </label>
+                                            <input id="buyerDistrict" type="text" placeholder=""
+                                                style="width:100%;padding:9px 12px;border-radius:8px;background:var(--input-bg);border:1px solid var(--input-border);color:var(--text-strong);font-size:14px;font-weight:700;outline:none;box-sizing:border-box;transition:border 0.2s"
+                                                onfocus="this.style.borderColor='var(--accent2)'"
+                                                onblur="this.style.borderColor='var(--input-border)'">
+                                        </div>
+
+                                        <!-- UTR -->
+                                        <div>
+                                            <label
+                                                style="font-size:12px;color:var(--text-strong);font-weight:700;margin-bottom:4px;display:block">
+                                                UTR Number <span style="color:var(--accent4)">*</span>
+                                                <span
+                                                    style="color:var(--muted);font-size:11px;font-weight:400;">(12-digit
+                                                    UPI transaction ID)</span>
+                                            </label>
+                                            <input id="buyerUTR" type="tel" placeholder="" maxlength="12"
+                                                style="width:100%;padding:9px 12px;border-radius:8px;background:var(--input-bg);border:1px solid var(--input-border);color:var(--text-strong);font-size:14px;font-weight:700;outline:none;box-sizing:border-box;transition:border 0.2s"
+                                                onfocus="this.style.borderColor='var(--accent2)'"
+                                                onblur="this.style.borderColor='var(--input-border)'">
+                                        </div>
+
+                                        <!-- Referral Code -->
+                                        <div>
+                                            <label
+                                                style="font-size:12px;color:var(--text-strong);font-weight:700;margin-bottom:4px;display:block">
+                                                Referral Code
+                                                <span
+                                                    style="color:var(--muted);font-size:11px;font-weight:400;">(optional)</span>
+                                            </label>
+                                            <input id="buyerRef" type="text" placeholder=""
+                                                style="width:100%;padding:9px 12px;border-radius:8px;background:var(--input-bg);border:1px solid var(--input-border);color:var(--text-strong);font-size:14px;font-weight:700;outline:none;box-sizing:border-box;transition:border 0.2s"
+                                                onfocus="this.style.borderColor='var(--accent2)'"
+                                                onblur="this.style.borderColor='var(--input-border)'">
+                                        </div>
+
+                                        <!-- Device ID -->
+                                        <div id="deviceIdWrapper">
+                                            <label id="deviceIdLabel"
+                                                style="font-size:12px;color:var(--text-strong);font-weight:700;margin-bottom:4px;display:block">
+                                                Device ID <span id="deviceIdRequired"
+                                                    style="color:var(--accent4)">*</span>
+                                                <span id="deviceIdOptionalTag"
+                                                    style="display:none;color:var(--muted);font-size:11px;font-weight:400;">(optional)</span>
+                                                <span style="color:var(--muted);font-size:11px;font-weight:400;">(e.g.
+                                                    sOiYgZXrnem2xHm1DnNp...)</span>
+                                            </label>
+                                            <input id="buyerDeviceId" type="text" placeholder=""
+                                                style="width:100%;padding:9px 12px;border-radius:8px;background:var(--input-bg);border:1px solid var(--input-border);color:var(--text-strong);font-size:13px;font-weight:700;outline:none;box-sizing:border-box;font-family:monospace;transition:border 0.2s"
+                                                onfocus="this.style.borderColor='var(--accent2)'"
+                                                onblur="this.style.borderColor='var(--input-border)'">
+                                            <div
+                                                style="margin-top:5px;padding:7px 10px;background:rgba(6,182,212,0.07);border:1px solid rgba(6,182,212,0.2);border-radius:7px;font-size:11px;color:var(--muted)">
+                                                <i class="fas fa-info-circle"
+                                                    style="color:var(--accent2);margin-right:4px"></i>
+                                                Find your Device ID in: <strong style="color:var(--text-strong)">Tool
+                                                    Settings → Change License → Click Copy ID Button</strong><br> Device
+                                                id will be long random text. Short id text is only for show.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="qrFormError"
+                                        style="display:none;color:var(--accent4);font-size:12px;margin-bottom:12px">
+                                        <i class="fas fa-exclamation-circle"></i> Please fill all required fields before
+                                        sending.
+                                    </div>
+
+                                    <!-- Submit button – fixed -->
+                                    <button onclick="submitOrder()"
+                                        style="display:inline-flex;align-items:center;gap:8px;background:var(--gradient-main);color:white;padding:12px 22px;border-radius:10px;font-weight:700;font-size:14px;border:2px solid rgba(255,255,255,0.2);cursor:pointer;width:100%;justify-content:center;box-shadow:0 6px 24px var(--glow-color), inset 0 1px 0 rgba(255,255,255,0.15);transition:all 0.3s ease"
+                                        onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 32px var(--glow-color), inset 0 1px 0 rgba(255,255,255,0.2)';"
+                                        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 24px var(--glow-color), inset 0 1px 0 rgba(255,255,255,0.15)';">
+                                        <i class="fas fa-check-circle" style="font-size:18px"></i> Submit
+                                    </button>
+
+                                    <p
+                                        style="font-size:11px;color:var(--muted);margin-top:12px;margin-bottom:0;text-align:center">
+                                        <i class="fas fa-info-circle"></i> Your license key will be sent to your
+                                        WhatsApp after verification
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================================
+     CONFIRMATION MODAL — Shown after submit
+     ============================================================ -->
+                    <div id="confirmModal"
+                        style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:10000;align-items:center;justify-content:center;backdrop-filter:blur(8px)">
+                        <div
+                            style="background:var(--bg-card);border-radius:20px;padding:32px;max-width:400px;width:90%;border:1px solid rgba(16,185,129,0.35);position:relative;animation:fadeIn 0.3s ease;box-shadow:0 0 40px rgba(16,185,129,0.15)">
+
+                            <!-- Close button -->
+                            <button onclick="closeConfirm()"
+                                style="position:absolute;top:14px;right:14px;background:var(--button-ghost-bg);border:1px solid var(--input-border);color:var(--text-soft);width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s ease"
+                                onmouseover="this.style.background='var(--button-ghost-hover)'"
+                                onmouseout="this.style.background='var(--button-ghost-bg)'">✕</button>
+
+                            <div style="text-align:center;margin-bottom:20px">
+                                <div style="font-size:40px;margin-bottom:8px">✅</div>
+                                <div style="font-size:20px;font-weight:800;color:#10b981;margin-bottom:4px">Order
+                                    Submitted!</div>
+                                <div style="font-size:13px;color:var(--muted)">Your details have been recorded. You will
+                                    get a confirmation email soon. <br> Now send your payment proof on WhatsApp to
+                                    Process your license fast.</div>
+                            </div>
+
+                            <!-- Summary -->
+                            <div id="confirmSummary"
+                                style="background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:12px;padding:14px;font-size:13px;color:var(--text-soft);margin-bottom:20px;line-height:1.8">
+                            </div>
+
+                            <!-- WhatsApp button -->
+                            <button onclick="sendWhatsAppFromConfirm()"
+                                style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25D366,#128C7E);color:white;padding:12px 22px;border-radius:10px;font-weight:700;font-size:14px;border:2px solid rgba(255,255,255,0.15);cursor:pointer;width:100%;justify-content:center;transition:all 0.3s ease;margin-bottom:10px;box-shadow:0 4px 16px rgba(37,211,102,0.3)"
+                                onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 28px rgba(37,211,102,0.4)'"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 16px rgba(37,211,102,0.3)'">
+                                <i class="fab fa-whatsapp" style="font-size:18px"></i> Send Payment Proof on WhatsApp
+                            </button>
+
+                            <p style="font-size:11px;color:var(--muted);text-align:center;margin:0">
+                                <i class="fas fa-info-circle"></i> Close this popup only after sending on WhatsApp.
+                                Closing will clear the form.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <section id="comparison" style="margin-top:20px">
+                        <h3 style="text-align:center;font-size:18px;margin-bottom:20px">📋 What's Included in Each Plan?
+                        </h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px">
+
+                            <!-- Regular -->
+                            <div class="panel fadeInUp" style="border:1px solid rgba(249,115,22,0.35);padding:22px">
+                                <div style="font-size:15px;font-weight:800;color:#f97316;margin-bottom:4px">🔵 Regular
+                                    Plan</div>
+                                <div style="font-size:11px;color:var(--muted);margin-bottom:14px;font-style:italic">
+                                    Estimation, Bill Preparation + Analysis Features</div>
+                                <ul
+                                    style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-soft)">
+                                    <li><span style="color:#10b981;margin-right:6px">✔</span>Full Sheet Process</li>
+                                    <li style="color:var(--muted);font-size:12px;padding-left:18px">Quantity, Sum,
+                                        Convert Qty, HSR Rate, Description, Amount Total, Blank Format</li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Steel Summary</li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Abstract Bill / Estimate
+                                    </li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Material Quantity</li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Bill / Estimate Compare
+                                    </li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Variation Table</li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Import Bill / Estimate /
+                                        Template / Variation or Tender notice
+                                    </li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Templates & Drawings</li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Download E-MB Bill Data
+                                    </li>
+                                    <li><span style="color:#f97316;margin-right:6px">✔</span>Delete E-MB Bill</li>
+                                </ul>
+                            </div>
+
+                            <!-- Premium -->
+                            <div class="panel fadeInUp"
+                                style="border:1px solid rgba(124,58,237,0.5);padding:22px;background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(6,182,212,0.04))">
+                                <div style="font-size:15px;font-weight:800;color:#a78bfa;margin-bottom:4px">👑 Premium
+                                    Plan</div>
+                                <div style="font-size:11px;color:var(--muted);margin-bottom:14px;font-style:italic">
+                                    BOQ Preparation + Analysis + Portal Uploading Features</div>
+                                <ul
+                                    style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-soft)">
+                                    <li><span style="color:#a78bfa;margin-right:6px">✔</span>All Regular Features</li>
+                                    <li><span style="color:#a78bfa;margin-right:6px">✔</span>Portal Uploading Features
+                                    </li>
+                                    <li><span style="color:#a78bfa;margin-right:6px">✔</span>No Restrictions</li>
+                                    <li><span style="color:#a78bfa;margin-right:6px">✔</span>Full Access to All features
+                                    </li>
+                                    <li
+                                        style="margin-top:6px;padding:8px 10px;background:rgba(124,58,237,0.15);border-radius:8px;border:1px solid rgba(124,58,237,0.3);font-size:12px;color:#c4b5fd">
+                                        🌟 Everything unlocked — no feature gates, no limits.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div><!-- /.wrap -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="brand">
+                        <div class="brand-mark"><img src="images/logo.png" alt="MRGARGSIR Tools"></div>
+                        <div class="brand-text">
+                            <strong>MRGARGSIR Tools</strong>
+                            <span>Civil Sahayak Tool & Extensions</span>
+                        </div>
+                    </a>
+                    <p>Always by your side — your civil engineering sahayak for HEWP. An independent automation toolkit for engineers and contractors working with the Haryana
+                        Engineering Works Portal — built to cut estimation and billing work by 90%.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer"
+                            title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+                        
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer" title="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <ul>
+                        <li><a href="../index.html#features">HEWP Excel Tool</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="purchase.html">Pricing & purchase</a></li>
+                        <li><a href="tutorials.html">Tutorials & setup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Extensions</h5>
+                    <ul>
+                        <li><a href="extension-chrome.html">Chrome / Edge Extension</a></li>
+                        <li><a href="extension-whatsapp.html">WhatsApp Sender</a></li>
+                        <li><a href="extension-macro.html">Web Automation Macro</a></li>
+                        <li><a href="metalweightcal.html">Metal Weight Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="mailto:civilSahayak@gmail.com">civilSahayak@gmail.com</a></li>
+                        <li><a href="https://wa.me/919728532828" target="_blank" rel="noopener noreferrer">+91 97285
+                                32828</a></li>
+                        <li><a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                                rel="noopener noreferrer">WhatsApp community</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <strong>Important disclaimer:</strong> This is an independent third-party tool, not affiliated with,
+                endorsed by, or connected to the HEWP portal or any government department.
+            </div>
+            <div class="footer-bottom">
+                <span>© MRGARGSIR 2026 — All rights reserved</span>
+                <span>Made for Engineers, JEs & Contractors across Haryana</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="scrollTopBtn" aria-label="Back to top" title="Back to top"><i
+            class="fas fa-arrow-up"></i></button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/site.js"></script>
+</body>
+
+</html>

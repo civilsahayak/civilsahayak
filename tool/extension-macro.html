@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: add fresh Google Search Console verification code for civilsahayak.github.io -->
+    <!-- <meta name="google-site-verification" content="PASTE_NEW_VERIFICATION_CODE_HERE" /> -->
+    <title>Web Automation Macro — Free Auxiliary Utility</title>
+    <meta name="description"
+        content="A free browser automation extension from Civil Sahayak Tool — record browser steps, edit workflows and resume automatically after a page reload.">
+    <meta name="keywords"
+        content="Civil Sahayak Tool, HEWP Excel Addins, Estimate, import, pdf to excel, import in excel, HEWP Tool, Excel addin, HEWP tutorials, HEWP WhatsApp, HEWP YouTube, billing, bill, boq tool, mrgargsir, tools by mrgargsir, BOQ preparation tool, building estimation tool, Metal Weight Calculator, contractor billing software, civil engineering Excel tools, third party Excel tools, automated estimation software, mrgargsir tools, hewptool, civilsahayak, variation tool, mrgargsir store" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://civilsahayak.github.io/civilsahayak/tool/extension-macro.html" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#0f1720">
+    <meta name="msapplication-TileImage" content="images/mstile-144x144.png">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#06b6d4">
+    <meta name="theme-color" content="#0f1720">
+    <meta name="msapplication-navbutton-color" content="#0f1720">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <canvas id="threejs-canvas"></canvas>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <div id="scroll-progress"></div>
+
+    <div class="floating-social">
+        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer"
+            class="floating-social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+        
+        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank" rel="noopener noreferrer"
+            class="floating-social-btn whatsapp-group" title="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://whatsapp.com/channel/0029VbBYrvx47XeIXLM2PU3u" target="_blank" rel="noopener noreferrer"
+            class="floating-social-btn whatsapp-channel" title="WhatsApp Channel"><i class="fas fa-bullhorn"></i></a>
+    </div>
+
+    <div class="wrap">
+        <header>
+            <a href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;">
+                <div class="brand">
+                    <div class="logo pulse">
+                        <img src="images/logo.png" alt="MRGARGSIR Tools"
+                            style="width:100%;height:100%;object-fit:contain;padding:0px;">
+                    </div>
+                    <div>
+                        <h1>Civil Sahayak Tool</h1>
+                        <p>(Your Civil Engineering Sahayak — Help At Every Step)</p>
+                        <p>By MRGARGSIR</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <a class="nav-btn" href="../index.html">Home</a>
+                <a class="nav-btn" href="../index.html#features">Features</a>
+                <div class="nav-dropdown">
+                    <button class="nav-btn nav-dropdown-trigger"><i class="fas fa-puzzle-piece"></i> Extensions <i
+                            class="fas fa-chevron-down" style="font-size:10px"></i></button>
+                    <div class="nav-dropdown-menu">
+                        <a href="extension-chrome.html"><i class="fab fa-chrome"></i> Chrome/Edge Utility</a>
+                        <a href="extension-whatsapp.html"><i class="fab fa-whatsapp"></i> WhatsApp Sender</a>
+                        <a href="metalweightcal.html"><i class="fas fa-weight-scale"></i> Metal Weight Calculator</a>
+                    </div>
+                </div>
+                <a class="nav-btn" href="tutorials.html">Tutorials</a>
+                <a class="nav-btn" href="download.html">Download</a>
+                <a class="nav-btn" href="purchase.html">Purchase</a>
+                <button class="nav-btn" id="contactBtn"><i class="fas fa-envelope"></i> Contact</button>
+                <button class="theme-toggle" id="themeToggleBtn" title="Toggle light / dark theme" aria-pressed="false">
+                    <span class="knob"><i class="fas fa-moon"></i></span>
+                </button>
+            </nav>
+
+            <div class="contact-modal" id="contactModal">
+                <h3><i class="fas fa-headset"></i> Contact Support</h3>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="label">Email</div>
+                        <div class="value">civilSahayak@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="label">WhatsApp</div>
+                        <div class="value">+91 9728532828</div>
+                    </div>
+                </div>
+
+                <div class="contact-actions">
+                    <button class="contact-btn email" id="emailBtn">
+                        <i class="fas fa-paper-plane"></i> Send Email
+                    </button>
+                    <button class="contact-btn whatsapp" id="whatsappBtn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </button>
+                    <button class="contact-btn whatsapp" id="whatsappgroupBtn">
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer" title="WhatsApp Group">
+                            <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+                        </a>
+                    </button>
+                </div>
+
+                <!-- 👉 Social Media Links -->
+                <div class="social-divider">
+                    <h4><i class="fas fa-share-nodes"></i> Follow Us</h4>
+                    <div class="social-links-modal">
+                        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer"
+                            class="social-btn facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer" class="social-btn whatsapp-group" title="WhatsApp Group">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbBYrvx47XeIXLM2PU3u" target="_blank"
+                            rel="noopener noreferrer" class="social-btn whatsapp-channel" title="WhatsApp Channel">
+                            <i class="fas fa-bullhorn"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+        <main>
+            <div class="crumb-bar"><a href="../index.html">Home</a> <span>/</span> <span>Extensions</span>
+                <span>/</span> <span>Web Automation Macro</span>
+            </div>
+            <div class="page-hero fadeInUp">
+                <h2><i class="fas fa-robot"></i> Web Automation Macro</h2>
+                <p>A small independent automation extension: record any sequence of browser steps as a reusable macro,
+                    edit it anytime, and it keeps going even if the page reloads.</p>
+            </div>
+
+            <section id="extension-details" style="margin-top:20px">
+                <h3>🔧 Main Features</h3>
+                <div class="panel fadeInUp">
+                    <p class="small"><strong>Important Note:</strong> All core portal automation (uploading estimates,
+                        e-MB bills, variations, and downloading data) is built directly inside our <strong>Excel
+                            Tool</strong>. This browser extension is an extra, optional, lightweight utility.</p>
+
+                    <div class="grid" style="margin-top:20px">
+                        <div class="feature fadeInUp">
+                            <i class="fas fa-circle-dot" style="color:#ef4444"></i>
+                            <h4>Record Steps</h4>
+                            <p>Record a sequence of steps on any website and save it as a re-usable workflow.</p>
+                        </div>
+                        <div class="feature fadeInUp">
+                            <i class="fas fa-pen-to-square" style="color:var(--accent2)"></i>
+                            <h4>Edit Mode</h4>
+                            <p>Edit a recorded workflow at any time — tweak existing steps or add new ones without
+                                re-recording from scratch.</p>
+                        </div>
+                        <div class="feature fadeInUp">
+                            <i class="fas fa-arrows-rotate" style="color:var(--accent1)"></i>
+                            <h4>Reload Support</h4>
+                            <p>No matter how many times the page reloads mid-run, automation continues exactly where it
+                                left off.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="extension-install" style="margin-top:20px">
+                <h3>⬇️ Add This Extension</h3>
+                <div class="panel fadeInUp"
+                    style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+                    <p class="small" style="flex:1;min-width:240px;margin:0">Available now on the Edge Add-ons store —
+                        Chrome Web Store listing coming soon.</p>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap">
+                        <div class="chrome-wrapper">
+                            <a href="#" class="cta primary chrome-store-btn"
+                                onclick="toggleChromeMessage(this); return false;">
+                                <i class="fab fa-chrome"></i> Chrome Web Store
+                            </a>
+                            <div class="chrome-message"
+                                style="font-size:12px; color:var(--text-muted); margin-top:6px;">
+                                ✅ Available in the main <a href="download.html"
+                                    style="color:var(--accent2); font-weight:600;">Civil Sahayak Tool installer</a> — download
+                                the full tool to get all extensions in one package.
+                            </div>
+                        </div>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/mrgargsir-web-automation-/emippldddpcoafddcnmnahcmmgjillpa"
+                            target="_blank" rel="noopener noreferrer" class="cta primary"><i class="fab fa-edge"></i>
+                            Edge Add-ons</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div><!-- /.wrap -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="brand">
+                        <div class="brand-mark"><img src="images/logo.png" alt="MRGARGSIR Tools"></div>
+                        <div class="brand-text">
+                            <strong>MRGARGSIR Tools</strong>
+                            <span>Civil Sahayak Tool & Extensions</span>
+                        </div>
+                    </a>
+                    <p>Always by your side — your civil engineering sahayak for HEWP. An independent automation toolkit for engineers and contractors working with the Haryana
+                        Engineering Works Portal — built to cut estimation and billing work by 90%.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/CivilSahayak" target="_blank" rel="noopener noreferrer"
+                            title="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+                        
+                        <a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                            rel="noopener noreferrer" title="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <ul>
+                        <li><a href="../index.html#features">HEWP Excel Tool</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="purchase.html">Pricing & purchase</a></li>
+                        <li><a href="tutorials.html">Tutorials & setup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Extensions</h5>
+                    <ul>
+                        <li><a href="extension-chrome.html">Chrome / Edge Extension</a></li>
+                        <li><a href="extension-whatsapp.html">WhatsApp Sender</a></li>
+                        <li><a href="extension-macro.html">Web Automation Macro</a></li>
+                        <li><a href="metalweightcal.html">Metal Weight Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="mailto:civilSahayak@gmail.com">civilSahayak@gmail.com</a></li>
+                        <li><a href="https://wa.me/919728532828" target="_blank" rel="noopener noreferrer">+91 97285
+                                32828</a></li>
+                        <li><a href="https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd" target="_blank"
+                                rel="noopener noreferrer">WhatsApp community</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <strong>Important disclaimer:</strong> This is an independent third-party tool, not affiliated with,
+                endorsed by, or connected to the HEWP portal or any government department.
+            </div>
+            <div class="footer-bottom">
+                <span>© MRGARGSIR 2026 — All rights reserved</span>
+                <span>Made for Engineers, JEs & Contractors across Haryana</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="scrollTopBtn" aria-label="Back to top" title="Back to top"><i
+            class="fas fa-arrow-up"></i></button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/site.js"></script>
+</body>
+
+</html>

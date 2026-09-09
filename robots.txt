@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://civilsahayak.github.io/civilsahayak/sitemap.xml
