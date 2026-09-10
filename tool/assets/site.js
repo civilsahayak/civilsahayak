@@ -802,7 +802,7 @@ function startDownload(button) {
     if (!button) return;
     let downloadURL, installerName;
     if (button.id === 'downloadBtnStandalone') {
-        downloadURL = standaloneURL; secondURL = fallbackURL; installerName = 'CivilSahayak_OfflineInstaller.exe';
+        downloadURL = standaloneURL; secondURL = fallbackURL; installerName = 'CivilSahayak_Installer.exe';
     } else {
         downloadURL = primaryURL; secondURL = fallbackURL; installerName = 'CivilSahayak_OnlineInstaller.exe';
     }
