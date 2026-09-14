@@ -3,7 +3,7 @@
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/Website-Visit-blue?style=for-the-badge)](https://civilsahayak.github.io/civilsahayak/)
+[![Website](https://img.shields.io/badge/Website-Visit-blue?style=for-the-badge)](https://civilsahayak.store/)
 [![Documents](https://img.shields.io/badge/Documents-Open-orange?style=for-the-badge)](#-documentation)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Contact-green?style=for-the-badge&logo=whatsapp)](https://wa.me/919728532828)
 [![Facebook](https://img.shields.io/badge/Facebook-Follow-1877F2?style=for-the-badge&logo=facebook)](https://facebook.com/CivilSahayak)
@@ -49,7 +49,7 @@ The name is literal: **Civil** — for civil engineering work — plus **सह�
 
 ## 🚀 Download
 
-**📦 Download from Official Website:** [https://civilsahayak.github.io/civilsahayak/](https://civilsahayak.github.io/civilsahayak/)
+**📦 Download from Official Website:** [https://civilsahayak.store/](https://civilsahayak.store/)
 
 **📦 Direct Installer Downloads (latest release):**
 - Online Installer: `https://github.com/civilsahayak/civilsahayak/releases/download/latest/OnlineInstaller.exe`
@@ -550,7 +550,7 @@ This ensures you are working with the latest portal data and prevents quantity m
 
 ## 🎥 Video Tutorials
 
-Step-by-step video walkthroughs are embedded directly on the [Tutorials page](https://civilsahayak.github.io/civilsahayak/tool/tutorials.html) of the website.
+Step-by-step video walkthroughs are embedded directly on the [Tutorials page](https://civilsahayak.store/tool/tutorials.html) of the website.
 
 ## 📄 Documentation
 
@@ -564,7 +564,7 @@ Step-by-step video walkthroughs are embedded directly on the [Tutorials page](ht
 
 - 📧 **Email:** civilSahayak@gmail.com
 - 📱 **WhatsApp:** +91 97285 32828
-- 🌐 **Website:** [https://civilsahayak.github.io/civilsahayak/](https://civilsahayak.github.io/civilsahayak/)
+- 🌐 **Website:** [https://civilsahayak.store/](https://civilsahayak.store/)
 
 ### 🌍 Social & Community:
 
@@ -643,7 +643,7 @@ This software is proprietary and licensed for use only by authorized customers w
 We're committed to being the assistant that makes your engineering work faster, easier, and error-free.
 
 For the latest updates, tutorials, and support:
-- 🌐 Visit: [civilsahayak.github.io/civilsahayak](https://civilsahayak.github.io/civilsahayak/)
+- 🌐 Visit: [civilsahayak.github.io/civilsahayak](https://civilsahayak.store/)
 - 💬 Join: [WhatsApp Community](https://chat.whatsapp.com/DEXKInfvpBd9cLwyaoq0sd)
 - 📘 Follow: [Facebook](https://facebook.com/CivilSahayak)
 
@@ -653,6 +653,6 @@ For the latest updates, tutorials, and support:
 
 **Made with ❤️ for Engineers and Contractors**
 
-[![Download Now](https://img.shields.io/badge/Download-Now-success?style=for-the-badge)](https://civilsahayak.github.io/civilsahayak/)
+[![Download Now](https://img.shields.io/badge/Download-Now-success?style=for-the-badge)](https://civilsahayak.store/)
 
 </div>
